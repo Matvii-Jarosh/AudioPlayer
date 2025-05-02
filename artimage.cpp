@@ -40,7 +40,7 @@ void ArtImage::updateArtwork() {
     } else {
         m_artwork = QImage(":/images/default_cover.png");
         if (m_artwork.isNull()) {
-            qDebug() << "Default cover image not found!";
+            //qDebug() << "Default cover image not found!";
         }
         update();
     }

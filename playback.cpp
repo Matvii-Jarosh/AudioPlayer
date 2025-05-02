@@ -82,6 +82,13 @@ void Playback::setAudio(QMediaPlayer* med, QAudioOutput* out) {
 
 void Playback::setupAudioConnections() {
     if (!player) return;
+    disconnect(player, nullptr, this, nullptr);
+    disconnect(startStopButton, nullptr, this, nullptr);
+    disconnect(prevButton, nullptr, this, nullptr);
+    disconnect(nextButton, nullptr, this, nullptr);
+    disconnect(playbackBar, nullptr, this, nullptr);
+    disconnect(volumeBar, nullptr, this, nullptr);
+
     connect(player, &QMediaPlayer::positionChanged, this, &Playback::updatePlaybackPosition);
     connect(player, &QMediaPlayer::durationChanged, this, &Playback::durationChanged);
     connect(player, &QMediaPlayer::playbackStateChanged, this, &Playback::handlePlaybackState);
