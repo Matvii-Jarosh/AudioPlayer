@@ -5,7 +5,7 @@
 
 ## Скриншот
 
-![screenshot_0](img/src0.png)
+![screenshot_0](img/scr0.png)
 
 ## Встановлення
 
